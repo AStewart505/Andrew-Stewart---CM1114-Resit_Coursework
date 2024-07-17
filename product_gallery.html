@@ -8,6 +8,7 @@
 
     <body>
         <header>
+            <!--Webpage title and logo image-->
             <h1 id="Title">RGU R US</h1>
             <img src="images/New_RGU_logo.jpg" alt="Logo" id="Logo">
         </header>
@@ -35,25 +36,34 @@
                 <!--Image Gallery-->
                 <div class ="Row">
                     <div class="col-sm">
-                        <img src="images/Beanie.webp" alt="Black Beanie Hat" class="GalleryImage" id="img-gallery1"/>
-                        <img src="images/Bobble Hat.webp" alt="Grey Bobble Hat" class="GalleryImage">
-                        <img src="images/Hoodie.webp" alt="Grey Hoodie" class="GalleryImage">    
+                        <!--beanie image-->
+                        <img src="images/Beanie.webp" alt="Black Beanie Hat" class="GalleryImage" onmouseover="highlight(this)" onmouseout="delight(this)" onclick="generateAlert()" />
+                        <!--Bobble hat image-->
+                        <img src="images/Bobble Hat.webp" alt="Grey Bobble Hat" class="GalleryImage" onmouseover="highlight(this)" onmouseout="delight(this)" onclick="generateAlert()">
+                        <!--hoodie image-->
+                        <img src="images/Hoodie.webp" alt="Grey Hoodie" class="GalleryImage" onmouseover="highlight(this)" onmouseout="delight(this)" onclick="generateAlert()" >    
                     </div>
                 </div>
                 
                 <div class ="Row">
                     <div class="col-sm">
-                        <img src="images/Laptop Sleeve.webp" alt="Purple Laptop Sleeve" class="GalleryImage"/>
-                        <img src="images/Mug.webp" alt="Purple Mug" class="GalleryImage"/>
-                        <img src="images/Phone Case.webp" alt="Purple Phone Case" class="GalleryImage"/>                         
+                        <!--Laptop Sleeve Image-->
+                        <img src="images/Laptop Sleeve.webp" alt="Purple Laptop Sleeve" class="GalleryImage" onmouseover="highlight(this)" onmouseout="delight(this)" onclick="generateAlert()"/>
+                        <!--Mug Image-->
+                        <img src="images/Mug.webp" alt="Purple Mug" class="GalleryImage" onmouseover="highlight(this)" onmouseout="delight(this)" onclick="generateAlert()"/>
+                        <!--Phone case image-->
+                        <img src="images/Phone Case.webp" alt="Purple Phone Case" class="GalleryImage" onmouseover="highlight(this)" onmouseout="delight(this)" onclick="generateAlert()"/>                         
                     </div>
                 </div>
 
                 <div class ="Row">
                     <div class="col-sm">
-                        <img src="images/SportsTee.png" alt="Black Sports T-Shirt" class="GalleryImage"/>
-                        <img src="images/Travel Mug.webp" alt="Purple Metal Travel Mug" class="GalleryImage"/>
-                        <img src="images/Wind Breaker.webp" alt="White Jumper" class="GalleryImage"/> 
+                        <!--T-shirt Image-->
+                        <img src="images/SportsTee.png" alt="Black Sports T-Shirt" class="GalleryImage" onmouseover="highlight(this)" onmouseout="delight(this)" onclick="generateAlert()"/>
+                        <!--Travel Mug Image-->
+                        <img src="images/Travel Mug.webp" alt="Purple Metal Travel Mug" class="GalleryImage" onmouseover="highlight(this)" onmouseout="delight(this)" onclick="generateAlert()"/>
+                        <!--Jumper Image-->
+                        <img src="images/Wind Breaker.webp" alt="White Jumper" class="GalleryImage" onmouseover="highlight(this)" onmouseout="delight(this)" onclick="generateAlert()"/> 
                     </div>
                    
                 </div>
@@ -70,23 +80,22 @@
         </footer>
 
         <script>
-            document.getElementsByClassName("GalleryImage").addEventListener("onmouseover",highlight());
-            document.getElementsByClassName("GalleryImage").addEventListener("onmouseout", delight());
 
-            document.getElementsByClassName("GalleryImage"),addEventListener("onclick", GenerateAlert());
-        
+        //Highlightrs the image to stand out when the user hovers the mouse over
+        function highlight(x) {
+            x.style="border:solid #87CEEB 2px;"
+        }
 
-                function highlight(){
-                    document.getElementsByClassName("GalleryImage").style.border=" solid #87CEEB 10px;"
-                }
+        //Removes the Highlight from the image when the user moves the mouse away
+        function delight(x) {
+            x.style="border: none;"
+        } 
 
-                function delight(){
-                    document.getElementsByClassName("GalleryImage").style="border: none;"
-                }
+        //Gneerates an alert when the image is clicked
+        function generateAlert(x){
+            alert("Thank you for your Interest!");
+        }
 
-                function GenerateAlert(){
-                        document.getElementsByClassName("GalleryImage")="alert('Registration Successful! Thank you!')"
-                }
 
         </script>
 
